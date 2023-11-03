@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    background-color: hsl(0, 0%, 81%);
+}
+main{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4 , 1fr);
+}
+.data-contiainer{
+    padding: 30px;
+    background-color: hsl(219, 29%, 14%);
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* typography heading 1 */
+.image-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.text-contianer-of-profile {
+    margin-left: 20px;
+}
+img{
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid hsl(0, 0%, 100%, .5);
+}
+.text-contianer-of-profile{
+    font-size: 20px;
+    font-weight: 500;
+}
+.text-contianer-of-profile span{
+    font-size: 17px;
+    color: hsla(0, 0%, 90%, 0.5);
+}
+/* paragraphs */
+.p-1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.p-2 {
+    /* font-size: px; */
+    line-height: 24px;
+    color: hsl(0, 0%, 100%, .5);
+}
+.bg-2,.bg-3 ,.bg-4,.bg-5{
+    max-width: 301px;
+}
+.bg-1,.bg-4 {
+    max-width: 622px;
+}
+/* bacgounds */
+.bg-1{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: 85% top;
+}
+.bg-2{
+    background-color: hsl(217, 19%, 35%);
+}
+
+.bg-5 ,.bg-3 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 1%, 30%);
+    width: 500px;
+}
+
+.bg-3 .p-2,.bg-3 span{
+    color: hsl(0, 1%, 30%,.5);
+}
+.bg-5 .p-2,.bg-5 span{
+    color: hsl(0, 1%, 30%,.5);
+}
+
+/* utiliy classes */
+.col-span {
+    grid-column: span 2;
+}
+
+/* grid columns */
+.data-contiainer:last-child{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
