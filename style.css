@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 body{
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -58,7 +57,7 @@ img{
     color: hsl(0, 0%, 100%, .5);
 }
 .bg-2,.bg-3 ,.bg-4,.bg-5{
-    max-width: 301px;
+    max-width: none;
     min-width: fit-content;
 }
 .bg-1,.bg-4 {
@@ -75,12 +74,13 @@ img{
 }
 .bg-2{
     background-color: hsl(217, 19%, 35%);
+
 }
 
 .bg-5 ,.bg-3 {
     background-color: hsl(0, 0%, 100%);
     color: hsl(0, 1%, 30%);
-    max-width: 500px;
+    max-width: none;
     min-width: fit-content;
 }
 
@@ -104,6 +104,13 @@ img{
     }
     .col-span {
         grid-column: span 2;
+    }
+    body{
+        display: flex;
+    }
+    /* typography */
+    .bg-3,.bg-5,.bg-2 {
+        max-width: 301px;
     }
     
 }
