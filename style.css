@@ -12,12 +12,12 @@ body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: hsl(0, 0%, 100%);
     font-size: 14px;
-    background-color: hsl(0, 0%, 81%);
+    background-color: hsl(210, 46%, 95%);
 }
 main{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(4 , 1fr);
+    margin: 30px;
 }
 .data-contiainer{
     padding: 30px;
@@ -29,7 +29,7 @@ main{
 .image-container{
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .text-contianer-of-profile {
     margin-left: 20px;
@@ -49,8 +49,8 @@ img{
 }
 /* paragraphs */
 .p-1 {
-    font-size: 25px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .p-2 {
     /* font-size: px; */
@@ -59,9 +59,11 @@ img{
 }
 .bg-2,.bg-3 ,.bg-4,.bg-5{
     max-width: 301px;
+    min-width: fit-content;
 }
 .bg-1,.bg-4 {
     max-width: 622px;
+    min-width: fit-content;
 }
 /* bacgounds */
 .bg-1{
@@ -78,7 +80,8 @@ img{
 .bg-5 ,.bg-3 {
     background-color: hsl(0, 0%, 100%);
     color: hsl(0, 1%, 30%);
-    width: 500px;
+    max-width: 500px;
+    min-width: fit-content;
 }
 
 .bg-3 .p-2,.bg-3 span{
@@ -87,15 +90,20 @@ img{
 .bg-5 .p-2,.bg-5 span{
     color: hsl(0, 1%, 30%,.5);
 }
-
-/* utiliy classes */
-.col-span {
-    grid-column: span 2;
-}
+/* tiliy classes */
 
 /* grid columns */
-.data-contiainer:last-child{
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
+
+@media (min-width:60em) {
+    mian{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .data-contiainer:last-child{
+        grid-column-start: 4;
+        grid-row: 1 / span 2;
+    }
+    .col-span {
+        grid-column: span 2;
+    }
+    
 }
